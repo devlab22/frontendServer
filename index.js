@@ -17,7 +17,7 @@ catch (e) {
   
 }
 
-const PORT = config.PORT || 8000
+const PORT = config.PORT || 8000;
 
 app.use(express.static(path.join(dirname, 'build')));
 
@@ -27,5 +27,5 @@ app.get('/*', function (req, res) {
 });
 
 app.listen(PORT, () => {
-  console.log(`server run on port ${PORT}`)
+  console.log(`server run on port ${PORT}`);
 });
