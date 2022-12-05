@@ -4,15 +4,17 @@ const app = express();
 
 const fs = require('fs');
 
-const rawdata = fs.readFileSync(path.join(process.cwd(), 'config.json'));
+const dirname = process.cwd();
+
+const rawdata = fs.readFileSync(path.join(dirname, 'config.json'));
 const config = JSON.parse(rawdata);
 
 const PORT = config.PORT || 8000
 
-app.use(express.static(path.join(process.cwd(), 'build')));
+app.use(express.static(path.join(dirname, 'build')));
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(process.cwd(), 'build', 'index.html'));
+  res.sendFile(path.join(dirname, 'build', 'index.html'));
   //res.json(config)
 });
 
