@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "merakiserverfrontend",
   "version": "1.0.0",
-  "description": "server",
+  "description": "Meraki Server Frontend",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
