@@ -4,19 +4,30 @@
   "description": "Meraki Server Frontend",
   "main": "index.js",
   "bin": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
     "build": "pkg .",
-    "start": "npm start"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "helmet": "^6.0.1",
-    "nodemon": "^2.0.20",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10",
     "pkg": "^5.8.0"
+  },
+  "pkg": {
+    "scripts": "*.js",
+    "targets": [
+      "node18-win-x64",
+      "node18-linux-x64"
+    ],
+    "outputPath": "dist"
   }
 }
